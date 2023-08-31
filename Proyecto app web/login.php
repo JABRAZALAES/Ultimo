@@ -84,7 +84,7 @@
                     <button type="submit" class="btn btn-yellow">Iniciar sesión</button>
                 </form>
                 <div class="mt-3">
-                    <a href="register.html" class="btn btn-link">¿No tienes una cuenta? Regístrate aquí</a>
+                    <a href="register.php" class="btn btn-link">¿No tienes una cuenta? Regístrate aquí</a>
                 </div>
             </div>
         </div>
