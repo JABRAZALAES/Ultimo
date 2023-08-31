@@ -2,7 +2,7 @@
 session_start(); // Inicia la sesión
 
 if (!isset($_SESSION["username"])) {
-    header("Location: login.html");
+    header("Location: login.php");
     exit();
 }
 ?>
@@ -157,7 +157,7 @@ if (!isset($_SESSION["username"])) {
             </li>
         </ul>
         <div class="navbar-nav ml-auto align-self-center">
-            <span class="navbar-text mr-2" style="font-size: 50px;">Bienvenido,</span>
+            <span class="navbar-text mr-2" style="font-size: 50px;"></span>
             <span class="navbar-text text-yellow" style="font-size: 50px;"><?php echo $_SESSION["username"]; ?></span>
         </div>
     </div>
