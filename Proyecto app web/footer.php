@@ -151,10 +151,7 @@ if (!isset($_SESSION["username"])) {
             <li class="nav-item ml-2">
                 <center><a href="formulario.html"><button class="btn btn-primary">Sugerencias</button></a></center>
             </li>
-            <br>
-            <li class="nav-item ml-2">
-                <center><a href="login.php" class="btn btn-yellow">Iniciar Sesión</a></center>
-            </li>
+       
         </ul>
         <div class="navbar-nav ml-auto align-self-center">
             <span class="navbar-text mr-2" style="font-size: 50px;"></span>
