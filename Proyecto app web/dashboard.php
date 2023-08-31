@@ -28,9 +28,11 @@ if (!isset($_SESSION["username"])) {
             border: 1px solid #ffffff;
             text-align: center;
         }
-        html,nav, .navbar-nav, .navbar-light, .navbar-brand, .navbar-expand-lg .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand, .navbar-toggler-icon, .navbar-toggler,section,footer,.container {
+        .container1 {
             
             font-family: 'Bebas Neue', sans-serif;
+            color: black;
+      text-shadow: 2px 2px yellow;
           }
 
         .caja>a {
@@ -68,27 +70,36 @@ if (!isset($_SESSION["username"])) {
         }
 
         .container1 {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 50px;
-            background-color: #ffffff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            margin-top: 20px; /* Ajusta el margen superior del container */
-            margin-bottom: 20px; /* Ajusta el margen inferior del container */
-        }
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: black; /* Fondo negro */
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white; /* Texto en color blanco */
+}
+
        /* Estilos para los botones */
        .btn-primary {
             background-color: yellow;
             color: black;
             border-color: yellow;
         }
+        
         .cuatro img {
-            width: 500%;
-            max-height: 800px; /* Ajusta la altura máxima de las imágenes */
-            object-fit: cover; /* Ajusta el modo de ajuste de la imagen */
-            margin-top: 20px; /* Agrega margen superior para separar las imágenes de los botones */
+    max-width: 100%; /* Cambia el valor a tu preferencia, por ejemplo: 300px */
+    height: auto;
+    object-fit: cover;
+    margin-top: 20px;
+}
+body, html {
+            background: url('FOOTER/fondo2.png') no-repeat center center fixed;
+            font-family: 'Bebas Neue', sans-serif;
+           
         }
+
     </style>
 </head>
 
@@ -104,38 +115,41 @@ if (!isset($_SESSION["username"])) {
     </header>
 
     <div class="container1">
-        <h1 class="text-center">Bienvenido, <?php echo $_SESSION["username"]; ?></h1>
-        <h2 class="text-center">¿Qué noticias deseas ver hoy?</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="cuatro">
-                    <a href="Basquet.html" class="btn btn-primary">Basquet</a>
-                    <br>
-                    
-                </div>
-                <div class="cuatro">
-                    <a href="Futbol.html" class="btn btn-primary">Fútbol</a>
-                    <br>
-                  
-                </div>
+    <h1 class="text-center">Bienvenido, <?php echo $_SESSION["username"]; ?></h1>
+    <h2 class="text-center">¿Qué noticias deseas ver hoy?</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="cuatro">
+                <a href="Basquet.html" class="btn btn-primary">Basquet</a>
+                <br>
+                <img src="FOOTER\32858-baloncesto.jpg" alt="Basquet" width="500">
             </div>
-            <div class="col-md-6">
-                <div class="cuatro">
-                    <a href="UFC.html" class="btn btn-primary">UFC</a>
-                    <br>
-                    
-                </div>
-                <div class="cuatro">
-                    <a href="ciclismo.html" class="btn btn-primary">Ciclismo</a>
-                    <br>
-                   
-                </div>
+            <div class="cuatro">
+                <a href="Futbol.html" class="btn btn-primary">Fútbol</a>
+                <br>
+                <img src="FOOTER/mejor.jpg" alt="Fútbol" width="500">
             </div>
         </div>
-        <div class="text-center mt-4">
-            <a href="logout.php" class="btn btn-danger">Cerrar sesión</a>
+        <div class="col-md-6">
+            <div class="cuatro">
+                <a href="UFC.html" class="btn btn-primary">UFC</a>
+                <br>
+                <img src="FOOTER\UFC.jpg" alt="UFC" width="500">
+            </div>
+            <div class="cuatro">
+                <a href="ciclismo.html" class="btn btn-primary">Ciclismo</a>
+                <br>
+                <img src="FOOTER\bicicletas.jpg" alt="Ciclismo" width="500">
+            </div>
         </div>
     </div>
+    <div class="text-center mt-4">
+        <a href="logout.php" class="btn btn-danger">Cerrar sesión</a>
+    </div>
+</div>
+
+
+
 
     <footer class="mt-2">
     <div class="container">
