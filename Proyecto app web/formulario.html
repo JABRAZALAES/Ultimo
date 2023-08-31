@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +11,20 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <script>
+          $(document).ready(function() {
+              $("#btnEnviar").click(function() {
+                  $.ajax({
+                      type: "POST",
+                      url: "registro.php",
+                      data: $("#formulario").serialize(),
+                      success: function(response) {
+                          $("#mensaje").text(response);
+                      }
+                  });
+              });
+          });
+      </script>
     <style>
         .caja {
             border: 1px solid #f9f6f6;
@@ -133,7 +149,7 @@
                     </a>
                 </li>
                 <li class="nav-item ml-2">
-                    <center><a href="formulario.html"><button class="btn btn-primary">Sugerencias</button></a></center>
+                    <center><a href="formulario.html"><button class="btn btn-primary">Suscríbete</button></a></center>
                 </li>
                 <br>
                 <li class="nav-item ml-2">
@@ -147,7 +163,10 @@
           <!-- Parte Izquierda - Formulario -->
           <div class="col-md-6">
             <h3 class="custom-title">Envíanos un mensaje</h3>
-            <form action="php/registro.php" method="post" id="formulario">
+
+
+
+            <form action="registro.php" method="post" id="formulario">
               <div class="form-group">
                 <label for="nombre" class="custom-title">Nombre</label>
                 <input type="text" class="form-control" name="nombre" id="nombre" required>
@@ -171,6 +190,9 @@
               </div>
               <button type="button" id="btnEnviar" class="btn btn-primary">Enviar</button>
             </form>
+
+
+
           </div>
           
       
