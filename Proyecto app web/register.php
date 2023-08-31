@@ -84,7 +84,7 @@
             </div>
             <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
             <div class="text-center mt-3">
-                <a href="login.html">Volver a iniciar sesión</a>
+            <a href="logout.php" class="btn btn-danger">Cerrar sesión</a>
             </div>
         </form>
 
