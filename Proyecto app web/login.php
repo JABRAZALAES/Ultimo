@@ -74,7 +74,7 @@
                             if ($validCredentials) {
                                 session_start();
                                 $_SESSION["username"] = $username;
-                                header("Location: dashboard.php");
+                                header("Location: footer.php");
                                 exit();
                             } else {
                                 echo '<div class="alert alert-danger" role="alert">Credenciales incorrectas</div>';
