@@ -1,4 +1,11 @@
+<?php
+session_start(); // Inicia la sesión
 
+if (!isset($_SESSION["username"])) {
+    header("Location: login.php");
+    exit();
+}
+?>  
 
 <!DOCTYPE html>
 <html lang="en">
@@ -162,6 +169,11 @@
           <a href="logout.php" class="btn btn-danger">Cerrar sesión</a>
         </li>
       </ul>
+      <div class="navbar-nav ml-auto align-self-center">
+            <span class="navbar-text mr-2" style="font-size: 50px;"></span>
+            <span class="navbar-text text-yellow" style="font-size: 50px;"><?php echo $_SESSION["username"]; ?></span>
+        </div>
+    </div>
     </div>
   </nav>
   <div class="container mt-5">

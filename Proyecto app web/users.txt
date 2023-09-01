@@ -1,18 +1,4 @@
-usuario1:contraseña1
-usuario2:contraseña2
-Josue_123:Josue2003
-Andres:Andres123
-tadeo:tadeo123
-raul faz:123
-josue espinoza:raul
-Nicolas lara:esgay
-josue.brazales@fa.progracademy.com:123
-<<<<<<< HEAD
-nicolaslara:nico
-=======
-chango:chango123
->>>>>>> 52a81c91cc86e1ea8de54d17d7cce8d8fe3f2efa
+
 josue:josue
-chango123:123
 raul:123
-refazzz:123
+
