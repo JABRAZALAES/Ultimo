@@ -167,8 +167,6 @@ if (isset($_POST["logout"])) {
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark badge-dark ">
-
 <nav class="navbar navbar-expand-lg navbar-dark badge-dark">
 
         <a class="navbar-brand" href="#"><img src="FOOTER/img/logo_white_large.png" width="300px" height="120px" alt=""></a>
