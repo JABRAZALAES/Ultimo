@@ -1,9 +1,14 @@
 Nombre: josue
 Comentario: agregar mas noticias
 
+<<<<<<< HEAD
 Nombre: Luis
 Comentario: 123
 
 Nombre: pinocha
 Comentario: 1234
+=======
+Nombre: josue
+Comentario: mnjn
+>>>>>>> 5f23d3e4dbd3cca1225d5043d8ee049ba87e0d84
 

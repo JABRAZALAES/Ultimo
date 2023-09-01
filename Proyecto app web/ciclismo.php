@@ -397,7 +397,7 @@ if (!isset($_SESSION["username"])) {
 
     <!-- Footer -->
     <!-- <div class="row badge-dark"> -->
-    <footer class="mt-2">
+    <footer class="mt-2 col-lg-12">
         <div class="row justify-content-around mt-3">
             <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <div class="caja m-2">
