@@ -16,7 +16,7 @@ if (!isset($_SESSION["username"])) {
   <title>FUTBOL</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <script src="JS/jQuery v3.7.0.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.google.com/specimen/Kanit" rel="stylesheet">
   <script>
    $(document).ready(function() {
   $('.ver-mas').click(function() {
@@ -64,7 +64,7 @@ if (!isset($_SESSION["username"])) {
     }
     html,nav, .navbar-nav, .navbar-light, .navbar-brand, .navbar-expand-lg .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand, .navbar-toggler-icon, .navbar-toggler,section,footer,.container,.container-fluid {
             
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Kanit', sans-serif;
           }
           .navbar {
             background-color: black;

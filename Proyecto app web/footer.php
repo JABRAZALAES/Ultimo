@@ -15,7 +15,7 @@ if (!isset($_SESSION["username"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INICIO</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Kanit" rel="stylesheet">
     <style>
         .caja {
             border: 1px solid #ffffff;
@@ -23,7 +23,7 @@ if (!isset($_SESSION["username"])) {
         }
         html,nav, .navbar-nav, .navbar-light, .navbar-brand, .navbar-expand-lg .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand, .navbar-toggler-icon, .navbar-toggler,section,footer,.container {
             
-            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Kanit', sans-serif;
           }
 
         .caja>a {
