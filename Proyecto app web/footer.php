@@ -151,6 +151,10 @@ if (!isset($_SESSION["username"])) {
         .caja a img:hover {
             transform: scale(1.2);
         }
+        .quienessomos{
+            font-family: 'Kanit', sans-serif;
+            font-size: 40px;
+        }
 
 
    
@@ -239,7 +243,14 @@ if (!isset($_SESSION["username"])) {
             </a>
         </div>
     </div>
+<<<<<<< Updated upstream
     
+=======
+    <div class="container">
+        <h2 class="section-title">Nuestras secciones
+        </h2>
+    </div>
+>>>>>>> Stashed changes
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-6">
@@ -291,7 +302,11 @@ if (!isset($_SESSION["username"])) {
             <div class="col-sm-12 col-12 d-sm-block d-lg-none d-md-none mt-4">
                 <div class="cuadro">
                     <center>
-                        <a href="#"><img src="FOOTER/img/ufc.png" alt="Descripción de la imagen" width="50%"
+<<<<<<< Updated upstream
+                        <a href="#"><img src="FOOTER/ufc.jpg" alt="Descripción de la imagen" width="50%"
+=======
+                        <a href="#"><img src="" alt="Descripción de la imagen" width="50%"
+>>>>>>> Stashed changes
                                 height="50%"></a>
                     </center>
                 </div>
@@ -299,7 +314,7 @@ if (!isset($_SESSION["username"])) {
         </div>
         <div class="container">
         <h2 class="section-title">¿Quienes somos?</h2>
-        <p class="text-center font-weight-bold">¡Bienvenidos a MutantesSport! Somos un equipo de apasionados por los deportes que ha reunido sus superpoderes
+        <p class="quienesomos">¡Bienvenidos a MutantesSport! Somos un equipo de apasionados por los deportes que ha reunido sus superpoderes
              para brindarte las últimas noticias y análisis en el mundo del deporte. Nuestra historia comenzó cuando cuatro
               amigos decidieron unir sus fuerzas y conocimientos para crear un espacio en línea donde los amantes del fútbol,
                baloncesto, UFC y ciclismo pudieran encontrar todo lo que necesitan saber.</p>
