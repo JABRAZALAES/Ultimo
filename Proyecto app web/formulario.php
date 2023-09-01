@@ -15,8 +15,7 @@ if (!isset($_SESSION["username"])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.google.com/specimen/Kanit" rel="stylesheet">
 
   <style>
     .caja {
@@ -61,7 +60,7 @@ if (!isset($_SESSION["username"])) {
     footer,
     .container {
 
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Kanit', sans-serif;
     }
 
     body {
@@ -77,7 +76,7 @@ if (!isset($_SESSION["username"])) {
     }
 
     body {
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Kanit', sans-serif;   
       background-color: #f5f5f5;
     }
 
@@ -162,12 +161,12 @@ if (!isset($_SESSION["username"])) {
           </a>
         </li>
         <li class="nav-item ml-2">
-          <center><a href="formulario.php"><button class="btn btn-primary">Suscríbete</button></a></center>
-        </li>
-        <br>
-        <li class="nav-item ml-2">
-          <a href="logout.php" class="btn btn-danger">Cerrar sesión</a>
-        </li>
+                <center><a href="formulario.php"><button class="btn btn-primary">Sugerencias</button></a></center>
+            </li>
+            <br>
+            <li class="nav-item ml-2">
+                <center><a href="login.php" class="btn btn-yellow">Cerrar Sesión</a></center>
+            </li>
       </ul>
       <div class="navbar-nav ml-auto align-self-center">
             <span class="navbar-text mr-2" style="font-size: 50px;"></span>
