@@ -56,7 +56,6 @@
                     
                     if (count($parts) >= 2) {
                         $storedUsername = $parts[0];
-                        $storedPassword = $parts[1];
                         
                         if ($storedUsername === $username) {
                             $error = "El usuario ya está registrado";
@@ -86,6 +85,11 @@
             <div class="form-group">
                 <label for="confirm_password">Confirmar contraseña:</label>
                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
+            </div>
+            <!-- Puedes dejar el campo de correo electrónico, pero no se procesará -->
+            <div class="form-group">
+                <label for="email">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email">
             </div>
             <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
             <div class="text-center mt-3">

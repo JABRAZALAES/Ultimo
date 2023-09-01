@@ -239,7 +239,7 @@ if (!isset($_SESSION["username"])) {
   </script>
 </head>
 
-<body>
+<body style="background-color: #e2dbdb;">
 <nav class="navbar navbar-expand-lg navbar-dark badge-dark">
     <a class="navbar-brand" href="#"><img src="FOOTER/img/logo_white_large.png" width="300px" height="120px" alt=""></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -440,24 +440,24 @@ if (!isset($_SESSION["username"])) {
     </div>
 
     <div class="container mt-4">
-  <h2 class="text-center mb-3">Comentarios Básquet</h2>
+  <h2 class="text-center mb-3">Comentarios Ciclismo</h2>
 
-  <form id="comentarioForm" class="mt-3 p-3 border rounded bg-light">
+  <form id="comentarioFormCiclismo" class="mt-3 p-3 border rounded bg-light" action="procesar_comentarios_ciclismo.php" method="POST">
     <div class="form-group">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" class="form-control" required>
+      <label for="nombreCiclismo">Nombre:</label>
+      <input type="text" id="nombreCiclismo" name="nombreCiclismo" class="form-control" required>
     </div>
 
     <div class="form-group">
-      <label for="comentario">Comentario:</label>
-      <textarea id="comentario" name="comentario" rows="4" class="form-control" required></textarea>
+      <label for="comentarioCiclismo">Comentario:</label>
+      <textarea id="comentarioCiclismo" name="comentarioCiclismo" rows="4" class="form-control" required></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary">Enviar Comentario</button>
   </form>
 
-  <div id="comentarios" class="mt-4 p-3 border rounded bg-light">
-    <?php include 'mostrar_comentarios.php'; ?>
+  <div id="comentariosCiclismo" class="mt-4 p-3 border rounded bg-light">
+    <?php include 'mostrar_comentarios_ciclismo.php'; ?>
   </div>
 </div>
 
