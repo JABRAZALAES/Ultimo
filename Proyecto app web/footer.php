@@ -339,7 +339,7 @@ if (!isset($_SESSION["username"])) {
         <img src="img/raul.jpeg" alt="Imagen 2" class="image">
         <div class="description">
             <h2 class="text-right">Raúl Faz</h2>
-            <p class="text-center font-weight-bold" >La pasión de Raúl por el ciclismo no tiene límites. Desde las carreras de ruta hasta el ciclismo de montaña, Alejandro sigue cada pedalada con entusiasmo.
+            <p class="text-center font-weight-bold" >La pasión de Raúl por el ciclismo no tiene límites. Desde las carreras de ruta hasta el ciclismo de montaña, Ladino sigue cada pedalada con entusiasmo.
                  Sus comentarios expertos sobre el mundo del ciclismo te mantendrán al tanto de las últimas competencias y tendencias.
 </p>
         </div>
