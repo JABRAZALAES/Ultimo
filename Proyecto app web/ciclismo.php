@@ -110,7 +110,7 @@ if (!isset($_SESSION["username"])) {
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="footer.php">
-                    <h5>Inicío</h5>
+                    <h5>Inicio</h5>
                 </a>
             </li>
             <li class="nav-item">
