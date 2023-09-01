@@ -17,6 +17,42 @@ if (!isset($_SESSION["username"])) {
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.google.com/specimen/Kanit" rel="stylesheet">
     <style>
+ .container2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .image {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .description {
+            flex: 1;
+        }
+
+        /* Estilos alternos para cambiar el orden de imagen y descripción */
+        .container2:nth-child(even) .image,
+        .container2:nth-child(odd) .description {
+            order: 2;
+        }
+
+        .container2:nth-child(even) .description,
+        .container2:nth-child(odd) .image {
+            order: 1;
+        }
+
+
+
+
+
+
+
+
         .caja {
             border: 1px solid #ffffff;
             text-align: center;
@@ -280,6 +316,25 @@ if (!isset($_SESSION["username"])) {
              para brindarte las últimas noticias y análisis en el mundo del deporte. Nuestra historia comenzó cuando cuatro
               amigos decidieron unir sus fuerzas y conocimientos para crear un espacio en línea donde los amantes del fútbol,
                baloncesto, UFC y ciclismo pudieran encontrar todo lo que necesitan saber.</p>
+               <h3 class="section-title">Conoce a los mutantes</h3>
+               <div class="container2">
+        <img src="img/foto.png" alt="Imagen 1" class="image">
+        <div class="description">
+            <h2>Josue Espinoza</h2>
+            <p class="text-center font-weight-bold">Su pasión por el fútbol y su habilidad para analizar los juegos desde un punto de vista estratégico
+                 lo convierten en nuestro experto en tácticas y estrategias. No hay partido que se le escape.</p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <img src="img/chango.jpg" alt="Imagen 2" class="image">
+        <div class="description">
+            <h2>Andres Brazales</h2>
+            <p class="text-center font-weight-bold" >¿Te apasiona la UFC? Andres es nuestro gurú de las artes marciales mixtas.
+                 Su conocimiento profundo del octágono y su habilidad para desglosar las peleas más emocionantes nos permiten brindarte los análisis más completos y emocionantes.
+</p>
+        </div>
+    </div>
     </div>
     </div>
     <footer class="mt-2 col-lg-12">
