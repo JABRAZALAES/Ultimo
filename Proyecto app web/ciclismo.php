@@ -154,7 +154,7 @@ if (!isset($_SESSION["username"])) {
     <div class="row">
         <div class="col">
             <!-- Carrusel -->
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -165,7 +165,7 @@ if (!isset($_SESSION["username"])) {
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="ciclismo\img\cicli3.jpg" class="d-block w-100" alt="...">
+                        <img src="Proyecto app web\ciclismo\img\Giro.jpg" class="d-block w-100" alt="...">
 
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
@@ -189,7 +189,46 @@ if (!isset($_SESSION["username"])) {
                 </button>
             </div>
         </div>
+    </div> -->
+    <section class="Carrusel">
+    
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Proyecto app web\ciclismo\img\TourdeFrance.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="Proyecto app web\ciclismo\img\vuelta.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="Proyecto app web\ciclismo\img\Giro.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+  
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
     </div>
+ 
+      
+      
+      
+  </section>
 
     <div class="container">
         <br>
