@@ -418,24 +418,28 @@
         </div>
       </div>
     </div>
-    <div class="row mt-3">
-      <div class="col-lg-12">
-        <div class="caja p-3">
-          <h4 style="text-shadow: 2px 2px yellow;">Editor de Noticias de Baloncesto</h4>
-          <p>Aquí puedes redactar y editar noticias deportivas relacionadas con el baloncesto.</p>
-          <textarea id="contenido" rows="10" class="form-control mt-2" style="resize: vertical;"
-            placeholder="Redacta tu noticia aquí"></textarea>
+
+    <div class="container mt-4">
+      <h2 class="text-center mb-3">Comentarios</h2>
+    
+      <form id="comentarioForm" class="mt-3 p-3 border rounded bg-light">
+        <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" class="form-control" required>
         </div>
-        <div class="caja p-3">
-          <button id="abrirArchivo" class="btn btn-dark">Abrir Noticia</button>
-          <button id="borrarTexto" class="btn btn-danger ml-2">Borrar Texto</button>
-          <button id="guardarTexto" class="btn btn-success ml-2">Guardar Noticia</button>
-          <input type="file" id="archivo" class="form-control-file mt-2">
+    
+        <div class="form-group">
+          <label for="comentario">Comentario:</label>
+          <textarea id="comentario" name="comentario" rows="4" class="form-control" required></textarea>
         </div>
+    
+        <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+      </form>
+    
+      <div id="comentarios" class="mt-4 p-3 border rounded bg-light">
+        <?php include 'mostrar_comentarios.php'; ?>
       </div>
     </div>
-
-    
 
   </div>
 
@@ -588,6 +592,27 @@
         }
       );
       
+    });
+  </script>
+   <script>
+    $(document).ready(function() {
+      $("#comentarioForm").submit(function(event) {
+        event.preventDefault();
+
+        var nombre = $("#nombre").val();
+        var comentario = $("#comentario").val();
+
+        $.ajax({
+          type: "POST",
+          url: "guardar_comentario.php",
+          data: { nombre: nombre, comentario: comentario },
+          success: function() {
+            $("#nombre").val("");
+            $("#comentario").val("");
+            $("#comentarios").load("mostrar_comentarios.php");
+          }
+        });
+      });
     });
   </script>
 </body>
