@@ -110,7 +110,7 @@ if (!isset($_SESSION["username"])) {
         <ul class="navbar-nav">
             <li class="nav-item">
                 <a class="nav-link" href="footer.php">
-                    <h5>Inicío</h5>
+                    <h5>Inicio</h5>
                 </a>
             </li>
             <li class="nav-item">
@@ -149,47 +149,48 @@ if (!isset($_SESSION["username"])) {
         </div>
     </div>
 </nav>
+<section class="Carrusel">
+    
 
-
-    <div class="row">
-        <div class="col">
-            <!-- Carrusel -->
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="FOOTER\img\Giro.jpg" class="d-block w-100" alt="...">
-
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img src="FOOTER\img\ciclismo_carrusel.png" class="d-block w-100" alt="...">
-
-                    </div>
-                    <div class="carousel-item">
-                        <img src="FOOTER\img\TourdeFrance.jpg" class="d-block w-100" alt="...">
-
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="FOOTER/img/nuevaportada.jpg" class="d-block w-100" alt="...">
         </div>
-    </div> 
+        <div class="carousel-item">
+          <img src="FOOTER/img/charles.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="FOOTER/img/pe2.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+  
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+ 
+      
+      
+      
+  </section>
+  
+
+
 
     <div class="container">
         <br>
