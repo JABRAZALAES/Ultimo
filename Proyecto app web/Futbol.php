@@ -319,7 +319,7 @@ if (!isset($_SESSION["username"])) {
 </div>
 
 
-<footer class="mt-2">
+       <footer class="mt-2">
         <div class="row justify-content-around mt-3">
             <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <div class="caja m-2">
