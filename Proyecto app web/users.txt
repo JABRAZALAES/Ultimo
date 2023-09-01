@@ -1,4 +1,18 @@
 
+Espinoza:espinoza123
+nICOLAS:NICOLASMARICON
+
 josue:josue
+refaz:123
 raul:123
 
+<<<<<<< HEAD
+>>>>>>> ebacb4f755eaf81d4e1c7f3f14dc680ced731515
+Josue:123
+=======
+
+<<<<<<< HEAD
+>>>>>>> a745346e5b33d9ac4041116daa46c9c559dafb3d
+=======
+ladino:ladino
+>>>>>>> 4836ab177425c24c5b04fca8ddc62e48d3e8e527

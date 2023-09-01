@@ -4,7 +4,7 @@
     <title>Iniciar sesión</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Kanit" rel="stylesheet">
     <style>
         body, html {
             height: 100%;
@@ -12,7 +12,7 @@
             padding: 0;
             background: url('FOOTER/fondo2.png') no-repeat center center fixed;
             background-size: cover;
-            font-family: 'Bebas Neue', sans-serif; /* Aplica la fuente de Google */
+            font-family:'Kanit', sans-serif;
         }
 
         .container {
@@ -63,11 +63,16 @@
                             $validCredentials = false;
 
                             foreach ($lines as $line) {
-                                list($storedUsername, $storedPassword) = explode(":", $line);
+                                $credentials = explode(":", $line);
 
-                                if ($storedUsername === $username && $storedPassword === $password) {
-                                    $validCredentials = true;
-                                    break;
+                                if (count($credentials) === 2) {
+                                    $storedUsername = $credentials[0];
+                                    $storedPassword = $credentials[1];
+
+                                    if ($storedUsername === $username && $storedPassword === $password) {
+                                        $validCredentials = true;
+                                        break;
+                                    }
                                 }
                             }
 

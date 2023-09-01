@@ -319,69 +319,69 @@ if (!isset($_SESSION["username"])) {
 </div>
 
 
-      <footer class="col-12 mt-2">
+<footer class="mt-2">
         <div class="row justify-content-around mt-3">
-          <div class=" col-lg-2 col-md-4 col-sm-6 col-6">
-            <div class="caja m-2">
-              <a href="#"><img src="FOOTER/img/facebook.png" width="30px" height="30px"></a>
-              <a href="#">
-                <p>facebook</p>
-              </a>
-              <p>@Sport360</p>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+
+                    <a href="#"><img src="FOOTER/img/facebook.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>Facebook</p>
+                    </a>
+                    <p>@MutanteSport</p>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-            <div class="caja  m-2">
-              <a href="#"><img src="FOOTER/img/instagram.png" width="30px" height="30px"></a>
-              <a href="#">
-                <p>instagram</p>
-              </a>
-              <p>@Sport360</p>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+                    <a href="#"><img src="FOOTER/img/instagram.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>Instagram</p>
+                    </a>
+                    <p>@MutanteSport</p>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-            <div class="caja  m-2">
-              <a href="#"><img src="FOOTER/img/signo-de-twitter.png" width="30px" height="30px"></a>
-              <a href="#">
-                <p>Twitter</p>
-              </a>
-              <p>@Sport360</p>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+                    <a href="#"><img src="FOOTER/img/signo-de-twitter.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>Twitter</p>
+                    </a>
+                    <p>@MutanteSport</p>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-            <div class="caja  m-2">
-              <a href="#"><img src="FOOTER/img/tik-tok.png" width="30px" height="30px"></a>
-              <a href="#">
-                <p>Tiktok</p>
-              </a>
-              <p>@Sport360</p>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+                    <a href="#"><img src="FOOTER/img/tik-tok.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>TikTok</p>
+                    </a>
+                    <p>@MutanteSport</p>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-            <div class="caja  m-2">
-              <a href="#"><img src="FOOTER/img/youtube.png" width="30px" height="30px"></a>
-              <a href="#">
-                <p>YouTube</p>
-              </a>
-              <p>@Sport360</p>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+                    <a href="#"><img src="FOOTER/img/youtube.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>YouTube</p>
+                    </a>
+                    <p>@MutanteSport</p>
+                </div>
             </div>
-          </div>
-          <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-            <div class="caja  m-2">
-              <a href="#"><img src="FOOTER/img/tumblr-logo.png" width="30px" height="30px"></a>
-              <a href="#">
-                <p>Tumblr</p>
-              </a>
-              <p>@Sport360</p>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+                    <a href="#"><img src="FOOTER/img/tumblr-logo.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>Tumblr</p>
+                    </a>
+                    <p>@MutanteSport</p>
+                </div>
             </div>
-          </div>
         </div>
         <hr>
-        <div class="col-lg-12 col-md 12 col-sm-12" style="text-align: center;">
-          <p>© 2023 Sport360. Todos los derechos reservados.</p>
-          <p>Grupo X</p>
+        <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: center;">
+            <p>© 2023 MutanteSport. Todos los derechos reservados.</p>
         </div>
-      </footer>
+    </footer>
       
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

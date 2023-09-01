@@ -88,7 +88,13 @@ if (!isset($_SESSION["username"])) {
             background-color: #050505;
             margin: 0%;
           } 
-          
+          .caja a img {
+            transition: transform 0.3s;
+        }
+
+        .caja a img:hover {
+            transform: scale(1.2);
+        }
     </style>
     <title>Ciclismo</title>
 </head>
@@ -392,70 +398,66 @@ if (!isset($_SESSION["username"])) {
     <!-- Footer -->
     <!-- <div class="row badge-dark"> -->
     <footer class="mt-2">
-        <div class="container">
-            <div class="row justify-content-around mt-3">
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="caja">
-                        <a href="#"><img src="FOOTER/img/facebook.png" alt=""></a>
-                        <a href="#">
-                            <p class="font-weight-bold">Facebook</p>
-                        </a>
-                        <p>@Sport360</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="caja">
-                        <a href="#"><img src="FOOTER/img/instagram.png" alt=""></a>
-                        <a href="#">
-                            <p class="font-weight-bold">Instagram</p>
-                        </a>
-                        <p>@Sport360</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="caja">
-                        <a href="#"><img src="FOOTER/img/signo-de-twitter.png" alt=""></a>
-                        <a href="#">
-                            <p class="font-weight-bold">Twitter</p>
-                        </a>
-                        <p>@Sport360</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="caja">
-                        <a href="#"><img src="FOOTER/img/tik-tok.png" alt=""></a>
-                        <a href="#">
-                            <p class="font-weight-bold">Tiktok</p>
-                        </a>
-                        <p>@Sport360</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="caja">
-                        <a href="#"><img src="FOOTER/img/youtube.png" alt=""></a>
-                        <a href="#">
-                            <p class="font-weight-bold">YouTube</p>
-                        </a>
-                        <p>@Sport360</p>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                    <div class="caja">
-                        <a href="#"><img src="FOOTER/img/tumblr-logo.png" alt=""></a>
-                        <a href="#">
-                            <p class="font-weight-bold">Tumblr</p>
-                        </a>
-                        <p>@Sport360</p>
-                    </div>
+        <div class="row justify-content-around mt-3">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+
+                    <a href="#"><img src="FOOTER/img/facebook.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>Facebook</p>
+                    </a>
+                    <p>@MutanteSport</p>
                 </div>
             </div>
-            <hr>
-            <div class="row justify-content-center">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <p class="text-center">© 2023 Sport360. Todos los derechos reservados.</p>
-                    <p class="text-center">Grupo X</p>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+                    <a href="#"><img src="FOOTER/img/instagram.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>Instagram</p>
+                    </a>
+                    <p>@MutanteSport</p>
                 </div>
             </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+                    <a href="#"><img src="FOOTER/img/signo-de-twitter.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>Twitter</p>
+                    </a>
+                    <p>@MutanteSport</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+                    <a href="#"><img src="FOOTER/img/tik-tok.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>TikTok</p>
+                    </a>
+                    <p>@MutanteSport</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+                    <a href="#"><img src="FOOTER/img/youtube.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>YouTube</p>
+                    </a>
+                    <p>@MutanteSport</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+                <div class="caja m-2">
+                    <a href="#"><img src="FOOTER/img/tumblr-logo.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="#">
+                        <p>Tumblr</p>
+                    </a>
+                    <p>@MutanteSport</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: center;">
+            <p>© 2023 MutanteSport. Todos los derechos reservados.</p>
         </div>
     </footer>
     <!-- </div> -->
