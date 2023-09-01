@@ -13,7 +13,7 @@ if (!isset($_SESSION["username"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>INICIO</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
@@ -107,6 +107,13 @@ if (!isset($_SESSION["username"])) {
             font-size: 32px;
             margin: 2px;
             margin-top: 2px;
+        }
+        .caja a img {
+            transition: transform 0.3s;
+        }
+
+        .caja a img:hover {
+            transform: scale(1.2);
         }
 
 
@@ -204,21 +211,21 @@ if (!isset($_SESSION["username"])) {
         <div class="row">
             <div class="col-lg-6">
                 <div class="cuadro">
-                    <a href="Futbol.html"><img src="FOOTER/img/futbol.jpg" alt="Descripción de la imagen"
+                    <a href="Futbol.php"><img src="FOOTER/img/futbol.jpg" alt="Descripción de la imagen"
                             class="img-fluid w-100"></a>
                 </div>
                 <div class="cuadro">
-                    <a href="Basquet.html"><img src="FOOTER/img/Basquet.webp" alt="Descripción de la imagen"
+                    <a href="Basquet.php"><img src="FOOTER/img/Basquet.webp" alt="Descripción de la imagen"
                             class="img-fluid w-100"></a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="cuadro">
-                    <a href="ciclismo.html"><img src="FOOTER/img/—Pngtree—logo bike cycling mtb isolated_5209109.png"
+                    <a href="ciclismo.php"><img src="FOOTER/img/—Pngtree—logo bike cycling mtb isolated_5209109.png"
                             alt="Descripción de la imagen" class="img-fluid w-100"></a>
                 </div>
                 <div class="cuadro">
-                    <a href="UFC.html"><img src="FOOTER/img/ufc.png" alt="Descripción de la imagen"
+                    <a href="UFC.php"><img src="FOOTER/img/ufc.png" alt="Descripción de la imagen"
                             class="img-fluid w-100"></a>
                 </div>
             </div>

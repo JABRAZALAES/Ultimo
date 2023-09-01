@@ -88,7 +88,13 @@ if (!isset($_SESSION["username"])) {
             background-color: #050505;
             margin: 0%;
           } 
-          
+          .caja a img {
+            transition: transform 0.3s;
+        }
+
+        .caja a img:hover {
+            transform: scale(1.2);
+        }
     </style>
     <title>Ciclismo</title>
 </head>
@@ -148,7 +154,7 @@ if (!isset($_SESSION["username"])) {
     <div class="row">
         <div class="col">
             <!-- Carrusel -->
-            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -159,7 +165,7 @@ if (!isset($_SESSION["username"])) {
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="ciclismo\img\cicli3.jpg" class="d-block w-100" alt="...">
+                        <img src="Proyecto app web\ciclismo\img\Giro.jpg" class="d-block w-100" alt="...">
 
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
@@ -183,7 +189,46 @@ if (!isset($_SESSION["username"])) {
                 </button>
             </div>
         </div>
+    </div> -->
+    <section class="Carrusel">
+    
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+  
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Proyecto app web\ciclismo\img\TourdeFrance.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="Proyecto app web\ciclismo\img\vuelta.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="Proyecto app web\ciclismo\img\Giro.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+  
+      <!-- Controls -->
+      <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
     </div>
+ 
+      
+      
+      
+  </section>
 
     <div class="container">
         <br>
@@ -366,23 +411,23 @@ if (!isset($_SESSION["username"])) {
 
 
     <div class="container mt-4">
-  <h2 class="text-center mb-3">Comentarios CICLISMO</h2>
+  <h2 class="text-center mb-3">Comentarios Ciclismo</h2>
 
-  <form id="comentarioFormCICLISMO" class="mt-3 p-3 border rounded bg-light">
+  <form id="comentarioFormCiclismo" class="mt-3 p-3 border rounded bg-light">
     <div class="form-group">
-      <label for="nombreCICLISMO">Nombre:</label>
-      <input type="text" id="nombreCICLISMO" name="nombreCICLISMO" class="form-control" required>
+      <label for="nombreCiclismo">Nombre:</label>
+      <input type="text" id="nombreCiclismo" name="nombreCiclismo" class="form-control" required>
     </div>
 
     <div class="form-group">
-      <label for="comentarioCICLISMO">Comentario:</label>
-      <textarea id="comentarioCICLISMO" name="comentarioCICLISMO" rows="4" class="form-control" required></textarea>
+      <label for="comentarioCiclismo">Comentario:</label>
+      <textarea id="comentarioCiclismo" name="comentarioCiclismo" rows="4" class="form-control" required></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary">Enviar Comentario</button>
   </form>
 
-  <div id="comentariosCICLISMO" class="mt-4 p-3 border rounded bg-light">
+  <div id="comentariosCiclismo" class="mt-4 p-3 border rounded bg-light">
     <?php include 'mostrar_comentarios_ciclismo.php'; ?>
   </div>
 </div>
@@ -507,22 +552,22 @@ if (!isset($_SESSION["username"])) {
         });
       });
     </script>
-    <script>
+   <script>
   $(document).ready(function() {
-    $("#comentarioFormCICLISMO").submit(function(event) {
+    $("#comentarioFormCiclismo").submit(function(event) {
       event.preventDefault();
 
-      var nombreCICLISMO = $("#nombreCICLISMO").val();
-      var comentarioCICLISMO = $("#comentarioCICLISMO").val();
+      var nombreCiclismo = $("#nombreCiclismo").val();
+      var comentarioCiclismo = $("#comentarioCiclismo").val();
 
       $.ajax({
         type: "POST",
         url: "guardar_comentario_ciclismo.php",
-        data: { nombreCICLISMO: nombreCICLISMO, comentarioCICLISMO: comentarioCICLISMO },
+        data: { nombreCiclismo: nombreCiclismo, comentarioCiclismo: comentarioCiclismo },
         success: function() {
-          $("#nombreCICLISMO").val("");
-          $("#comentarioCICLISMO").val("");
-          $("#comentariosCICLISMO").load("mostrar_comentarios_ciclismo.php");
+          $("#nombreCiclismo").val("");
+          $("#comentarioCiclismo").val("");
+          $("#comentariosCiclismo").load("mostrar_comentarios_ciclismo.php");
         }
       });
     });
