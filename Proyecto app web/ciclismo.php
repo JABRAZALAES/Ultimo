@@ -100,6 +100,81 @@ if (!isset($_SESSION["username"])) {
     object-fit: cover; /* Escala la imagen para cubrir todo el espacio disponible */
     width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
   }
+
+  /*/////////////////////////////////////////*/
+  #menuContainer {
+            position: fixed;
+            right: -300px; /* Colocar el menú fuera de la pantalla inicialmente */
+            top: 0;
+            width: 300px;
+            height: 100%;
+            background-color: #FBF6B8; /* Amarillo claro */
+            color: black;
+            border-left: 2px solid #000; /* Borde izquierdo oscuro */
+            transition: right 0.3s; /* Transición para suavizar la animación */
+            z-index: 999; /* Asegura que el menú esté en la parte superior */
+        }
+
+        #menuContent {
+            padding: 20px;
+        }
+
+        #menuButton {
+            position: fixed;
+            right: 0;
+            top: 50%; /* Coloca el botón en la mitad de la pantalla verticalmente */
+            transform: translateY(-50%); /* Centra verticalmente */
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Estilo para la pestaña "Calendario" */
+        #calendarTab {
+            position: fixed;
+            right: -40px; /* Coloca la pestaña fuera de la pantalla inicialmente */
+            top: 50%; /* Coloca la pestaña en la mitad de la pantalla verticalmente */
+            transform: translateY(-50%) rotate(-90deg); /* Rotación del texto */
+            background-color: #FFFF99;
+            color: black;
+            padding: 10px 15px;
+            cursor: pointer;
+            z-index: 1000; /* Asegura que la pestaña esté en la parte superior */
+            white-space: nowrap; /* Evita el ajuste automático del texto */
+        }
+
+        /* Estilo para resaltar las fechas marcadas */
+        .marked-date {
+            background-color: #FFD700; /* Color de fondo amarillo para resaltar */
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Estilo para los títulos de las fechas marcadas */
+        .marked-title {
+            background-color: #FFA07A; /* Color de fondo melocotón */
+            color: black;
+            font-weight: bold;
+            padding: 5px;
+            margin-top: 10px;
+        }
+        /******************************* */
+        .recuadro {
+  background-color: #F3BD50; /* Color claro de fondo */
+  border: 2px solid #333; /* Bordes oscuros */
+  padding: 10px; /* Espaciado interior */
+  border-radius: 10px; /* Bordes redondos */
+  transition: transform 0.2s; /* Transición para el efecto hover */
+  margin: 2px; /* Margen de 2px */
+  color: blue; /* Color de las letras azul */
+  font-family: Arial, sans-serif; /* Tipo de letra alternativo */
+}
+
+
+  .recuadro:hover {
+    transform: scale(1.05); /* Agrandar un poco al pasar el mouse */
+  }
     </style>
     <title>Ciclismo</title>
 </head>
@@ -539,6 +614,109 @@ if (!isset($_SESSION["username"])) {
       });
     });
   });
+</script>
+
+ <!-- Pestaña "Calendario" -->
+ <div id="calendarTab">Calendario</div>
+
+<!-- Contenedor del menú desplegable -->
+<div id="menuContainer">
+    <div id="menuContent">
+        <h2>Calendario</h2>
+        <?php
+        // Función para verificar si una fecha está marcada y obtener su título
+        function getMarkedTitle($day, $month) {
+            $markedDates = [
+                ['day' => 3, 'month' => 9, 'title' => 'Clásica Bretaña'], // 3 septiembre Clásica Bretaña
+                ['day' => 8, 'month' => 9, 'title' => 'Gran Premio de Québec (Canadá)'], // 8 septiembre Gran Premio de Québec (Canadá)
+                ['day' => 10, 'month' => 9, 'title' => 'Gran Premio de Montreal (Canadá)'], // 10 septiembre Gran Premio de Montreal (Canadá)
+            ];
+
+            foreach ($markedDates as $date) {
+                if ($date['day'] == $day && $date['month'] == $month) {
+                    return $date['title'];
+                }
+            }
+            return false;
+        }
+
+        // Obtener el mes y el año actual
+        $mesActual = date("n");
+        $anioActual = date("Y");
+
+        // Calcular el primer y último día del mes
+        $primerDia = mktime(0, 0, 0, $mesActual, 1, $anioActual);
+        $ultimoDia = mktime(0, 0, 0, $mesActual + 1, 0, $anioActual);
+        ?>
+
+        <table>
+            <caption><?php echo date("F Y", $primerDia); ?></caption>
+            <tr>
+                <th>Lun</th>
+                <th>Mar</th>
+                <th>Mié</th>
+                <th>Jue</th>
+                <th>Vie</th>
+                <th>Sáb</th>
+                <th>Dom</th>
+            </tr>
+            <tr>
+                <?php
+                // Rellenar celdas en blanco hasta el primer día del mes
+                for ($i = 1; $i < date("N", $primerDia); $i++) {
+                    echo "<td></td>";
+                }
+
+                // Ciclo para mostrar los días del mes
+                for ($dia = 1; $dia <= date("j", $ultimoDia); $dia++) {
+                    $isMarked = getMarkedTitle($dia, $mesActual);
+                    $class = $isMarked ? 'marked-date' : '';
+
+                    echo "<td class='$class'>$dia</td>";
+                    if (date("N", mktime(0, 0, 0, $mesActual, $dia, $anioActual)) == 7) {
+                        echo "</tr><tr>";
+                    }
+                }
+
+                // Rellenar celdas en blanco después del último día del mes
+                $ultimoDiaSemana = date("N", $ultimoDia);
+                for ($i = $ultimoDiaSemana; $i < 7; $i++) {
+                    echo "<td></td>";
+                }
+                ?>
+            </tr>
+        </table>
+    </div>
+
+    <div class="recuadro">
+<p>3 septiembre Clásica Bretaña</p>
+</div>
+
+<div class="recuadro">
+<p>8 septiembre Gran Premio de Québec (Canadá)</p>
+</div>
+
+<div class="recuadro">
+<p>10 septiembre Gran Premio de Montreal (Canadá)</p>
+</div>
+</div>
+
+<!-- Agrega los enlaces a los archivos JavaScript de Bootstrap y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Manejar el clic en el botón "Calendario"
+        $("#calendarTab").click(function() {
+            // Mostrar u ocultar el menú
+            if ($("#menuContainer").css("right") === "0px") {
+                $("#menuContainer").css("right", "-300px"); // Ocultar el menú
+            } else {
+                $("#menuContainer").css("right", "0px"); // Mostrar el menú
+            }
+        });
+    });
 </script>
 </body>
 
