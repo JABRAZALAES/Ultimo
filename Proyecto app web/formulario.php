@@ -162,7 +162,7 @@ if (!isset($_SESSION["username"])) {
           </a>
         </li>
         <li class="nav-item ml-2">
-          <center><a href="formulario.html"><button class="btn btn-primary">Suscríbete</button></a></center>
+          <center><a href="formulario.php"><button class="btn btn-primary">Suscríbete</button></a></center>
         </li>
         <br>
         <li class="nav-item ml-2">

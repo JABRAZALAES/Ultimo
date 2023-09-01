@@ -1,2 +1,9 @@
+<<<<<<< HEAD
 Espinoza:espinoza123
 nICOLAS:NICOLASMARICON
+=======
+
+josue:josue
+raul:123
+
+>>>>>>> ebacb4f755eaf81d4e1c7f3f14dc680ced731515
