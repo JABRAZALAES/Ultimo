@@ -95,6 +95,11 @@ if (!isset($_SESSION["username"])) {
         .caja a img:hover {
             transform: scale(1.2);
         }
+        .carousel-item img {
+    height: 100vh; /* Establece la altura al 100% de la altura visible de la pantalla */
+    object-fit: cover; /* Escala la imagen para cubrir todo el espacio disponible */
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  }
     </style>
     <title>Ciclismo</title>
 </head>
@@ -163,13 +168,13 @@ if (!isset($_SESSION["username"])) {
       <!-- Slides -->
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="FOOTER/img/nuevaportada.jpg" class="d-block w-100" alt="...">
+          <img src="ciclismo\img\ciclismo_carrusel.png" class="d-block w-100" alt="..." >
         </div>
         <div class="carousel-item">
-          <img src="FOOTER/img/charles.jpg" class="d-block w-100" alt="...">
+          <img src="ciclismo\img\Giro.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="FOOTER/img/pe2.jpg" class="d-block w-100" alt="...">
+          <img src="ciclismo\img\vuelta.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
   
