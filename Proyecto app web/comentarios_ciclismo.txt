@@ -1,6 +1,0 @@
-Nombre: nico
-Comentario: adas
-
-Nombre: raul
-Comentario: es gay
-
