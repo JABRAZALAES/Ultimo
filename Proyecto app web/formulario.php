@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,7 +118,6 @@
       margin: 0%;
     }
   </style>
-
 </head>
 
 <body style="background-color: #e2dbdb;">
@@ -171,43 +172,74 @@
 
 
 
+
+
+
+
+
+
         <form action="registro.php" method="post" id="formulario">
-          <div class="form-group">
-            <label for="nombre" class="custom-title">Nombre</label>
-            <input type="text" class="form-control" name="nombre" id="nombre" required>
-          </div>
-          <div class="form-group">
-            <label for="apellido" class="custom-title">Apellido</label>
-            <input type="text" class="form-control" name="apellido" id="apellido" required>
-          </div>
-          <div class="form-group">
-            <label for="correo" class="custom-title">Correo Electrónico</label>
-            <input type="email" class="form-control" name="correo" id="correo" required>
-          </div>
-          <div class="form-group">
-            <label for="telefono" class="custom-title">Número</label>
-            <input type="text" class="form-control" name="telefono" id="telefono" required>
-            <small class="form-text text-muted">Máximo 10 caracteres.</small>
-          </div>
-          <div class="form-group">
-            <label for="mensaje" class="custom-title">Mensaje</label>
-            <textarea class="form-control" name="mensaje" id="mensaje" rows="5" required></textarea>
-          </div>
-          <button type="button" id="btnEnviar" class="btn btn-primary">Enviar</button>
-        </form>
+    <div class="form-group">
+        <label for="nombre" class="custom-title">Nombre</label>
+        <input type="text" class="form-control" name="nombre" id="nombre" required>
+    </div>
+    <div class="form-group">
+        <label for="apellido" class="custom-title">Apellido</label>
+        <input type="text" class="form-control" name="apellido" id="apellido" required>
+    </div>
+    <div class="form-group">
+        <label for="correo" class="custom-title">Correo Electrónico</label>
+        <input type="email" class="form-control" name="correo" id="correo" required
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+               title="Ingrese una dirección de correo válida">
+    </div>
+    <div class="form-group">
+        <label for="telefono" class="custom-title">Número</label>
+        <input type="text" class="form-control" name="telefono" id="telefono" required
+               pattern="\d{10}" title="Ingrese un número de 10 dígitos">
+        <small class="form-text text-muted">Máximo 10 caracteres.</small>
+    </div>
+    <div class="form-group">
+        <label for="mensaje" class="custom-title">Mensaje</label>
+        <textarea class="form-control" name="mensaje" id="mensaje" rows="5" required></textarea>
+    </div>
+    <button type="button" id="btnEnviar" class="btn btn-primary">Enviar</button>
+</form>
+
+
 
         <div id="ultimaSugerencia">
     Última Sugerencia Enviada:<br>
     <?php
     $archivo = "datosFormulario.txt";
     if (file_exists($archivo)) {
-        $lineas = file($archivo);
+        $lineas = file($archivo, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         if (!empty($lineas)) {
-            $ultimaLinea = array_pop($lineas);
-            $nombre = trim(explode(": ", $lineas[0])[1]);  // Obtiene el valor del nombre
-            $mensaje = trim(explode(": ", $lineas[4])[1]); // Obtiene el valor del mensaje
-            echo "Nombre: " . htmlspecialchars($nombre) . "<br>";
-            echo "Mensaje: " . htmlspecialchars($mensaje);
+            $ultimaLinea = trim(end($lineas));
+            $datos = explode("\n", $ultimaLinea);
+            $nombre = '';
+            $mensaje = '';
+
+            foreach ($datos as $dato) {
+                $partes = explode(": ", $dato);
+                if (count($partes) === 2) {
+                    $clave = trim($partes[0]);
+                    $valor = trim($partes[1]);
+                    
+                    if ($clave === 'Nombre') {
+                        $nombre = htmlspecialchars($valor);
+                    } elseif ($clave === 'Mensaje') {
+                        $mensaje = htmlspecialchars($valor);
+                    }
+                }
+            }
+
+            if (!empty($nombre)) {
+                echo "Nombre: " . $nombre . "<br>";
+            }
+            if (!empty($mensaje)) {
+                echo "Mensaje: " . $mensaje;
+            }
         }
     }
     ?>
