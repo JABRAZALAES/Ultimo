@@ -314,7 +314,7 @@ if (!isset($_SESSION["username"])) {
         </div>
         <div class="container">
         <h2 class="section-title">¿Quienes somos?</h2>
-        <p class="quienesomos">¡Bienvenidos a MutantesSport! Somos un equipo de apasionados por los deportes que ha reunido sus superpoderes
+        <p class="text-center font-weight-bold">¡Bienvenidos a MutantesSport! Somos un equipo de apasionados por los deportes que ha reunido sus superpoderes
              para brindarte las últimas noticias y análisis en el mundo del deporte. Nuestra historia comenzó cuando cuatro
               amigos decidieron unir sus fuerzas y conocimientos para crear un espacio en línea donde los amantes del fútbol,
                baloncesto, UFC y ciclismo pudieran encontrar todo lo que necesitan saber.</p>
@@ -322,7 +322,7 @@ if (!isset($_SESSION["username"])) {
                <div class="container2">
         <img src="img/foto.png" alt="Imagen 1" class="image">
         <div class="description">
-            <h2>Josue Espinoza</h2>
+            <h2 class="text-right">Josue Espinoza</h2>
             <p class="text-center font-weight-bold">Su pasión por el fútbol y su habilidad para analizar los juegos desde un punto de vista estratégico
                  lo convierten en nuestro experto en tácticas y estrategias. No hay partido que se le escape.</p>
         </div>
@@ -337,6 +337,27 @@ if (!isset($_SESSION["username"])) {
 </p>
         </div>
     </div>
+    <div class="container2">
+        <img src="img/raul.jpeg" alt="Imagen 2" class="image">
+        <div class="description">
+            <h2 class="text-right">Raúl Faz</h2>
+            <p class="text-center font-weight-bold" >La pasión de Raúl por el ciclismo no tiene límites. Desde las carreras de ruta hasta el ciclismo de montaña, Alejandro sigue cada pedalada con entusiasmo.
+                 Sus comentarios expertos sobre el mundo del ciclismo te mantendrán al tanto de las últimas competencias y tendencias.
+</p>
+        </div>
+    </div>
+    <div class="container2">
+        <img src="img/Nicolas.jpeg" alt="Imagen 2" class="image">
+        <div class="description">
+            <h2>Nicolás Lara</h2>
+            <p class="text-center font-weight-bold" >El baloncesto corre por las venas de Nicolás. Con su habilidad para encontrar los aspectos más destacados y momentos cruciales en cada juego, se ha convertido en nuestra
+                 fuente confiable para todo lo relacionado con la canasta. Siempre está listo para celebrar un triple espectacular.
+</p>
+        </div>
+    </div>
+    <p class="text-center font-weight-bold">En MutantesSport, nuestra misión es llevarte más allá de los titulares y
+         brindarte una perspectiva única de cada deporte. Estamos aquí para mantenerte informado,
+         entretenido y conectado con la emoción de los deportes que amamos. ¡Acompáñanos en esta aventura deportiva!</p>
     </div>
     </div>
     <footer class="mt-2 col-lg-12">
