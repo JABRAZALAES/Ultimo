@@ -1,11 +1,21 @@
 <?php
 session_start(); // Inicia la sesión
 
-if (!isset($_SESSION["username"])) {
+// Verificar si el usuario ha iniciado sesión
+if (isset($_SESSION["username"])) {
+    $isLoggedIn = true;
+    $username = $_SESSION["username"];
+} else {
+    $isLoggedIn = false;
+}
+
+if (isset($_POST["logout"])) {
+    // Cerrar sesión si se ha enviado el formulario de cierre de sesión
+    session_destroy();
     header("Location: login.php");
     exit();
 }
-?>
+?>      
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,14 +55,6 @@ if (!isset($_SESSION["username"])) {
         .container2:nth-child(odd) .image {
             order: 1;
         }
-
-
-
-
-
-
-
-
         .caja {
             border: 1px solid #ffffff;
             text-align: center;
@@ -163,53 +165,55 @@ if (!isset($_SESSION["username"])) {
 
 <body style="background-color: #e2dbdb;">
 <nav class="navbar navbar-expand-lg navbar-dark badge-dark">
-    <a class="navbar-brand" href="#"><img src="FOOTER/img/logo_white_large.png" width="300px" height="120px" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="footer.php">
-                    <h5>Inicio</h5>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="UFC.php">
-                    <h5>UFC</h5>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Futbol.php">
-                    <h5>Fútbol</h5>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Basquet.php">
-                    <h5>Básquet</h5>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="ciclismo.php">
-                    <h5>Ciclismo</h5>
-                </a>
-            </li>
-            <li class="nav-item ml-2">
-                <center><a href="formulario.php"><button class="btn btn-primary">Sugerencias</button></a></center>
-            </li>
-            <br>
-            <li class="nav-item ml-2">
-                <center><a href="login.php" class="btn btn-yellow">Cerrar Sesión</a></center>
-            </li>
-       
-        </ul>
-        <div class="navbar-nav ml-auto align-self-center">
-            <span class="navbar-text mr-2" style="font-size: 50px;"></span>
-            <span class="navbar-text text-yellow" style="font-size: 50px;"><?php echo $_SESSION["username"]; ?></span>
+        <a class="navbar-brand" href="#"><img src="FOOTER/img/logo_white_large.png" width="300px" height="120px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="footer.php">
+                        <h5>Inicio</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="UFC.php">
+                        <h5>UFC</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Futbol.php">
+                        <h5>Fútbol</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Basquet.php">
+                        <h5>Básquet</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ciclismo.php">
+                        <h5>Ciclismo</h5>
+                    </a>
+                </li>
+                <li class="nav-item ml-2">
+                    <?php if ($isLoggedIn) { ?>
+                    <form method="POST">
+                        <button type="submit" class="btn btn-yellow" name="logout">Cerrar Sesión</button>
+                    </form>
+                    <?php } else { ?>
+                    <center><a href="login.php" class="btn btn-primary">Iniciar Sesión</a></center>
+                    <?php } ?>
+                </li>
+                <li class="nav-item ml-2">
+                    <?php if ($isLoggedIn) { ?>
+                    <span class="navbar-text text-yellow" style="font-size: 50px;"><?php echo $username; ?></span>
+                    <?php } ?>
+                </li>
+            </ul>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <div class="scrolling-text-container">
         <marquee behavior="scroll" direction="left">
@@ -403,6 +407,20 @@ if (!isset($_SESSION["username"])) {
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Obtener el elemento de la barra de navegación
+        const navbar = document.querySelector('.navbar');
+
+        // Obtener el estado de inicio de sesión desde PHP
+        const isLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
+
+        // Agregar o quitar clases según el estado de inicio de sesión
+        if (isLoggedIn) {
+            navbar.classList.add('navbar-left'); // Agregar clase para desplazar a la izquierda
+        } else {
+            navbar.classList.remove('navbar-left'); // Quitar clase
+        }
+    </script>
 </body>
 
 </html>
