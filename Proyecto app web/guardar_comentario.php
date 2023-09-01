@@ -4,8 +4,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $comentario = $_POST["comentario"];
   
   $contenido = "Nombre: $nombre\n";
-  $contenido .= "Comentario:\n$comentario\n\n";
+  $contenido .= "Comentario: $comentario\n\n";
   
-  file_put_contents("basquet.txt", $contenido, FILE_APPEND);
+  file_put_contents("comentarios.txt", $contenido, FILE_APPEND);
 }
 ?>

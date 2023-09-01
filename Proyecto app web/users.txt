@@ -14,6 +14,12 @@ chango:chango123
 >>>>>>> 52a81c91cc86e1ea8de54d17d7cce8d8fe3f2efa
 josue:josue
 chango123:123
+<<<<<<< HEAD
 Luis:luis123
 fatima:123
 Fatima  :fatima123
+=======
+raul:123
+refazzz:123
+>>>>>>> f37aa6ebfbea5bc269c2d4ea4d270e6f57851b21
+peludo:peludo123
