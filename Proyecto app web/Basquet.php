@@ -433,26 +433,26 @@ if (!isset($_SESSION["username"])) {
     </div>
 
     <div class="container mt-4">
-      <h2 class="text-center mb-3">Comentarios</h2>
-    
-      <form id="comentarioForm" class="mt-3 p-3 border rounded bg-light">
-        <div class="form-group">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" class="form-control" required>
-        </div>
-    
-        <div class="form-group">
-          <label for="comentario">Comentario:</label>
-          <textarea id="comentario" name="comentario" rows="4" class="form-control" required></textarea>
-        </div>
-    
-        <button type="submit" class="btn btn-primary">Enviar Comentario</button>
-      </form>
-    
-      <div id="comentarios" class="mt-4 p-3 border rounded bg-light">
-        <?php include 'mostrar_comentarios_basquet.php'; ?>
-      </div>
+  <h2 class="text-center mb-3">Comentarios</h2>
+
+  <form id="comentarioForm" class="mt-3 p-3 border rounded bg-light">
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" class="form-control" required>
     </div>
+
+    <div class="form-group">
+      <label for="comentario">Comentario:</label>
+      <textarea id="comentario" name="comentario" rows="4" class="form-control" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+  </form>
+
+  <div id="comentarios" class="mt-4 p-3 border rounded bg-light">
+    <?php include 'mostrar_comentarios.php'; ?>
+  </div>
+</div>
 
   </div>
 
@@ -608,26 +608,26 @@ if (!isset($_SESSION["username"])) {
     });
   </script>
    <script>
-    $(document).ready(function() {
-      $("#comentarioForm").submit(function(event) {
-        event.preventDefault();
+$(document).ready(function() {
+  $("#comentarioForm").submit(function(event) {
+    event.preventDefault();
 
-        var nombre = $("#nombre").val();
-        var comentario = $("#comentario").val();
+    var nombre = $("#nombre").val();
+    var comentario = $("#comentario").val();
 
-        $.ajax({
-          type: "POST",
-          url: "guardar_comentario.php",
-          data: { nombre: nombre, comentario: comentario },
-          success: function() {
-            $("#nombre").val("");
-            $("#comentario").val("");
-            $("#comentarios").load("mostrar_comentarios.php");
-          }
-        });
-      });
+    $.ajax({
+      type: "POST",
+      url: "guardar_comentario.php",
+      data: { nombre: nombre, comentario: comentario },
+      success: function() {
+        $("#nombre").val("");
+        $("#comentario").val("");
+        $("#comentarios").load("mostrar_comentarios.php");
+      }
     });
-  </script>
+  });
+});
+</script>
 </body>
 
 </html>
