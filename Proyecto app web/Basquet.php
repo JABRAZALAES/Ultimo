@@ -450,7 +450,7 @@ if (!isset($_SESSION["username"])) {
       </form>
     
       <div id="comentarios" class="mt-4 p-3 border rounded bg-light">
-        <?php include 'mostrar_comentarios.php'; ?>
+        <?php include 'mostrar_comentarios_basquet.php'; ?>
       </div>
     </div>
 

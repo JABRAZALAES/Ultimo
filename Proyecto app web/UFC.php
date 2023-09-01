@@ -284,6 +284,8 @@ if (!isset($_SESSION["username"])) {
           </div>
       </div>
 
+  
+
     <footer class="mt-2">
       <div class="container">
         <div class="row justify-content-around mt-3">

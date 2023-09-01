@@ -6,6 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $contenido = "Nombre: $nombre\n";
   $contenido .= "Comentario:\n$comentario\n\n";
   
-  file_put_contents("comentarios.txt", $contenido, FILE_APPEND);
+  file_put_contents("basquet.txt", $contenido, FILE_APPEND);
 }
 ?>
