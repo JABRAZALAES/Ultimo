@@ -392,8 +392,8 @@ if (isset($_POST["logout"])) {
             <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <div class="caja m-2">
 
-                    <a href="#"><img src="FOOTER/img/facebook.png" width="30px" height="30px" style="margin-top: 20px;"></a>
-                    <a href="#">
+                    <a href="https://www.facebook.com/mutantessport?mibextid=avESrC"><img src="FOOTER/img/facebook.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="https://www.facebook.com/mutantessport?mibextid=avESrC">
                         <p>Facebook</p>
                     </a>
                     <p>@MutanteSport</p>
@@ -401,8 +401,8 @@ if (isset($_POST["logout"])) {
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <div class="caja m-2">
-                    <a href="#"><img src="FOOTER/img/instagram.png" width="30px" height="30px" style="margin-top: 20px;"></a>
-                    <a href="#">
+                    <a href="https://instagram.com/mutantesport360?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><img src="FOOTER/img/instagram.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="https://instagram.com/mutantesport360?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
                         <p>Instagram</p>
                     </a>
                     <p>@MutanteSport</p>
@@ -410,8 +410,8 @@ if (isset($_POST["logout"])) {
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <div class="caja m-2">
-                    <a href="#"><img src="FOOTER/img/signo-de-twitter.png" width="30px" height="30px" style="margin-top: 20px;"></a>
-                    <a href="#">
+                    <a href="https://twitter.com/MutantesSp43173?t=dVIYLWI8dcuve_lbzEAS0w&s=09"><img src="FOOTER/img/signo-de-twitter.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="https://twitter.com/MutantesSp43173?t=dVIYLWI8dcuve_lbzEAS0w&s=09">
                         <p>Twitter</p>
                     </a>
                     <p>@MutanteSport</p>
@@ -419,8 +419,8 @@ if (isset($_POST["logout"])) {
             </div>
             <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <div class="caja m-2">
-                    <a href="#"><img src="FOOTER/img/tik-tok.png" width="30px" height="30px" style="margin-top: 20px;"></a>
-                    <a href="#">
+                    <a href="http://tiktok.com/@mutantessport"><img src="FOOTER/img/tik-tok.png" width="30px" height="30px" style="margin-top: 20px;"></a>
+                    <a href="http://tiktok.com/@mutantessport">
                         <p>TikTok</p>
                     </a>
                     <p>@MutanteSport</p>
