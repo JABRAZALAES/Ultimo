@@ -204,15 +204,15 @@
         $lineas = file($archivo);
         if (!empty($lineas)) {
             $ultimaLinea = array_pop($lineas);
-            $datos = explode("\n", $ultimaLinea);
-            $nombre = $datos[0];
-            $mensaje = $datos[4];  // Corrección: usar índice 4 para obtener el mensaje
+            $nombre = trim(explode(": ", $lineas[0])[1]);  // Obtiene el valor del nombre
+            $mensaje = trim(explode(": ", $lineas[4])[1]); // Obtiene el valor del mensaje
             echo "Nombre: " . htmlspecialchars($nombre) . "<br>";
             echo "Mensaje: " . htmlspecialchars($mensaje);
         }
     }
     ?>
 </div>
+
 
 
 
