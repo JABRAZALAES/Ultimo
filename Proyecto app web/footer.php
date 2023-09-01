@@ -207,7 +207,14 @@ if (!isset($_SESSION["username"])) {
             </a>
         </div>
     </div>
+<<<<<<< Updated upstream
     
+=======
+    <div class="container">
+        <h2 class="section-title">Nuestras secciones
+        </h2>
+    </div>
+>>>>>>> Stashed changes
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-6">
@@ -259,7 +266,11 @@ if (!isset($_SESSION["username"])) {
             <div class="col-sm-12 col-12 d-sm-block d-lg-none d-md-none mt-4">
                 <div class="cuadro">
                     <center>
+<<<<<<< Updated upstream
                         <a href="#"><img src="FOOTER/ufc.jpg" alt="Descripción de la imagen" width="50%"
+=======
+                        <a href="#"><img src="" alt="Descripción de la imagen" width="50%"
+>>>>>>> Stashed changes
                                 height="50%"></a>
                     </center>
                 </div>
