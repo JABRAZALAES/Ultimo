@@ -52,14 +52,19 @@
                 $lines = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
 
                 foreach ($lines as $line) {
-                    list($storedUsername, $storedPassword) = explode(":", $line);
-
-                    if ($storedUsername === $username) {
-                        $error = "El usuario ya está registrado";
-                        break;
+                    $parts = explode(":", $line);
+                    
+                    if (count($parts) >= 2) {
+                        $storedUsername = $parts[0];
+                        $storedPassword = $parts[1];
+                        
+                        if ($storedUsername === $username) {
+                            $error = "El usuario ya está registrado";
+                            break;
+                        }
                     }
                 }
-
+                
                 if (!isset($error)) {
                     // Agregar el nuevo usuario al archivo
                     file_put_contents($file, "$username:$password\n", FILE_APPEND);
@@ -84,7 +89,7 @@
             </div>
             <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
             <div class="text-center mt-3">
-            <a href="logout.php" class="btn btn-danger">Cerrar sesión</a>
+            <a href="logout.php" class="btn btn-danger">Volver a iniciar sesión</a>
             </div>
         </form>
 
