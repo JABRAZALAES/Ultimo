@@ -63,11 +63,16 @@
                             $validCredentials = false;
 
                             foreach ($lines as $line) {
-                                list($storedUsername, $storedPassword) = explode(":", $line);
+                                $credentials = explode(":", $line);
 
-                                if ($storedUsername === $username && $storedPassword === $password) {
-                                    $validCredentials = true;
-                                    break;
+                                if (count($credentials) === 2) {
+                                    $storedUsername = $credentials[0];
+                                    $storedPassword = $credentials[1];
+
+                                    if ($storedUsername === $username && $storedPassword === $password) {
+                                        $validCredentials = true;
+                                        break;
+                                    }
                                 }
                             }
 
