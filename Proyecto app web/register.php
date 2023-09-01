@@ -4,12 +4,12 @@
     <title>Registrarse</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.google.com/specimen/Kanit" rel="stylesheet">
     <style>
         body {
             background: url('FOOTER/fondo2.png') no-repeat center center fixed;
             background-size: cover;
-            font-family: 'Bebas Neue', sans-serif; 
+            font-family: 'Kanit', sans-serif;
         }
 
         .container {
