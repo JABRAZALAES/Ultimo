@@ -100,7 +100,7 @@ if (!isset($_SESSION["username"])) {
 
 
   </head>
-  <body style="background-color: #e2dbdb;">
+  <body >
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark badge-dark">
     <a class="navbar-brand" href="#"><img src="FOOTER/img/logo_white_large.png" width="300px" height="120px" alt=""></a>

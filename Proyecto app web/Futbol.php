@@ -59,9 +59,8 @@ if (!isset($_SESSION["username"])) {
     .cuadro img:hover {
             transform: scale(1.05);
         }
-        body {
-      background-color: #e2dbdb;
-    }
+
+    
     html,nav, .navbar-nav, .navbar-light, .navbar-brand, .navbar-expand-lg .navbar-nav .nav-link, .navbar-light .navbar-nav .nav-link, .navbar-light .navbar-brand, .navbar-toggler-icon, .navbar-toggler,section,footer,.container,.container-fluid {
             
             font-family: 'Kanit', sans-serif;
