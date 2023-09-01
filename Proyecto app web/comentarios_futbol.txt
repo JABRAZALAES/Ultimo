@@ -1,3 +1,9 @@
 Nombre: josue
 Comentario: agregar mas noticias
 
+Nombre: Luis
+Comentario: 123
+
+Nombre: pinocha
+Comentario: 1234
+
