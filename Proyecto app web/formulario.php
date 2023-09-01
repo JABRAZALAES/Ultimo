@@ -130,27 +130,27 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="footer.html">
+          <a class="nav-link" href="footer.php">
             <h5>Inicío</h5>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="UFC.html">
+          <a class="nav-link" href="UFC.php">
             <h5>UFC</h5>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Futbol.html">
+          <a class="nav-link" href="Futbol.php">
             <h5>Fútbol</h5>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Basquet.html">
+          <a class="nav-link" href="Basquet.php">
             <h5>Básquet</h5>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ciclismo.html">
+          <a class="nav-link" href="ciclismo.php">
             <h5>Ciclismo</h5>
           </a>
         </li>
