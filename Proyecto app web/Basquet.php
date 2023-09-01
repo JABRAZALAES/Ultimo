@@ -142,6 +142,13 @@ if (!isset($_SESSION["username"])) {
     .zoomIn {
       animation-name: zoomIn;
     }
+    .caja a img {
+            transition: transform 0.3s;
+        }
+
+        .caja a img:hover {
+            transform: scale(1.2);
+        }
 
     /* Definición de las animaciones */
     @keyframes fadeIn {

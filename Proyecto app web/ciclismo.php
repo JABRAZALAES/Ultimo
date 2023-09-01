@@ -88,7 +88,13 @@ if (!isset($_SESSION["username"])) {
             background-color: #050505;
             margin: 0%;
           } 
-          
+          .caja a img {
+            transition: transform 0.3s;
+        }
+
+        .caja a img:hover {
+            transform: scale(1.2);
+        }
     </style>
     <title>Ciclismo</title>
 </head>

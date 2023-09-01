@@ -60,6 +60,7 @@ if (!isset($_SESSION["username"])) {
             height: 250px; /* Ajusta la altura de las imágenes */
             object-fit: cover; /* Ajusta el recorte de las imágenes para mantener las proporciones */
         }
+        
         .card-img-top:hover {
             transform: scale(1.1); /* Aplica la escala de 1.1 al pasar el mouse por encima */
         }
@@ -84,6 +85,14 @@ if (!isset($_SESSION["username"])) {
             background-color: #050505;
             margin: 0%;
           }
+
+          .caja a img {
+            transition: transform 0.3s;
+        }
+
+        .caja a img:hover {
+            transform: scale(1.2);
+        }
 
   </style>
 
