@@ -207,14 +207,12 @@ if (!isset($_SESSION["username"])) {
             </a>
         </div>
     </div>
-<<<<<<< Updated upstream
-    
-=======
+
     <div class="container">
         <h2 class="section-title">Nuestras secciones
         </h2>
     </div>
->>>>>>> Stashed changes
+
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-6">
