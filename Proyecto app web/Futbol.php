@@ -317,9 +317,7 @@ if (!isset($_SESSION["username"])) {
     </div>
 
 </div>
-
-
-       <footer class="mt-2">
+<footer class="mt-2 col-lg-12">
         <div class="row justify-content-around mt-3">
             <div class="col-lg-2 col-md-4 col-sm-6 col-6">
                 <div class="caja m-2">
@@ -383,7 +381,11 @@ if (!isset($_SESSION["username"])) {
         </div>
     </footer>
       
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -410,7 +412,4 @@ if (!isset($_SESSION["username"])) {
             });
         });
     </script>
-</body>
-
-
 </html>
