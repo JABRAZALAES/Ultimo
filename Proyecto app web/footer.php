@@ -310,11 +310,11 @@ if (isset($_POST["logout"])) {
             <div class="col-sm-12 col-12 d-sm-block d-lg-none d-md-none mt-4">
                 <div class="cuadro">
                     <center>
-<<<<<<< Updated upstream
+
                         <a href="#"><img src="FOOTER/ufc.jpg" alt="Descripción de la imagen" width="50%"
-=======
+=
                         <a href="#"><img src="" alt="Descripción de la imagen" width="50%"
->>>>>>> Stashed changes
+
                                 height="50%"></a>
                     </center>
                 </div>
@@ -381,12 +381,6 @@ if (isset($_POST["logout"])) {
         entretenido y conectado con la emoción de los deportes que amamos. ¡Acompáñanos en esta aventura deportiva!
     </p>
 </div>
-
-   
-
-
-
-
 
 
     <footer class="mt-2 col-lg-12">
