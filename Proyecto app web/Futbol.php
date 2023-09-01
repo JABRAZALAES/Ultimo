@@ -86,6 +86,7 @@ if (!isset($_SESSION["username"])) {
             margin: 0%;
           }
   
+       
   </style>
 </head>
 
@@ -293,7 +294,29 @@ if (!isset($_SESSION["username"])) {
         </div>
       </div>
 
-  
+    
+    <div class="container mt-4">
+  <h2 class="text-center mb-3">Comentarios FÚTBOL</h2>
+
+  <form id="comentarioFormFutbol" action="guardar_comentario_futbol.php" method="post" class="mt-3 p-3 border rounded bg-light">
+        <div class="form-group">
+            <label for="nombreFutbol">Nombre:</label>
+            <input type="text" id="nombreFutbol" name="nombreFutbol" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="comentarioFutbol">Comentario:</label>
+            <textarea id="comentarioFutbol" name="comentarioFutbol" rows="4" class="form-control" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+    </form>
+
+    <div id="comentariosFutbol" class="mt-4 p-3 border rounded bg-light">
+        <?php include 'mostrar_comentarios_futbol.php'; ?>
+    </div>
+
+</div>
 
 
       <footer class="col-12 mt-2">
@@ -362,10 +385,31 @@ if (!isset($_SESSION["username"])) {
       
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     </div>
   </div>
+  <script>
+        $(document).ready(function() {
+            $("#comentarioFormFutbol").submit(function(event) {
+                event.preventDefault();
+
+                var nombreFutbol = $("#nombreFutbol").val();
+                var comentarioFutbol = $("#comentarioFutbol").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "guardar_comentario_futbol.php",
+                    data: { nombreFutbol: nombreFutbol, comentarioFutbol: comentarioFutbol },
+                    success: function() {
+                        $("#nombreFutbol").val("");
+                        $("#comentarioFutbol").val("");
+                        $("#comentariosFutbol").load("mostrar_comentarios_futbol.php");
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 

@@ -284,7 +284,28 @@ if (!isset($_SESSION["username"])) {
           </div>
       </div>
 
-  
+      <div class="container mt-4">
+  <h2 class="text-center mb-3">Comentarios UFC</h2>
+
+  <form id="comentarioFormUFC" class="mt-3 p-3 border rounded bg-light">
+    <div class="form-group">
+      <label for="nombreUFC">Nombre:</label>
+      <input type="text" id="nombreUFC" name="nombreUFC" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="comentarioUFC">Comentario:</label>
+      <textarea id="comentarioUFC" name="comentarioUFC" rows="4" class="form-control" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+  </form>
+
+  <div id="comentariosUFC" class="mt-4 p-3 border rounded bg-light">
+    <?php include 'mostrar_comentarios_ufc.php'; ?>
+  </div>
+</div>
+
 
     <footer class="mt-2">
       <div class="container">
@@ -399,6 +420,26 @@ if (!isset($_SESSION["username"])) {
         });
       });
     </script>
- 
+    <script>
+  $(document).ready(function() {
+    $("#comentarioFormUFC").submit(function(event) {
+      event.preventDefault();
+
+      var nombreUFC = $("#nombreUFC").val();
+      var comentarioUFC = $("#comentarioUFC").val();
+
+      $.ajax({
+        type: "POST",
+        url: "guardar_comentario_ufc.php",
+        data: { nombreUFC: nombreUFC, comentarioUFC: comentarioUFC },
+        success: function() {
+          $("#nombreUFC").val("");
+          $("#comentarioUFC").val("");
+          $("#comentariosUFC").load("mostrar_comentarios_ufc.php");
+        }
+      });
+    });
+  });
+</script>
   </body>
 </html>

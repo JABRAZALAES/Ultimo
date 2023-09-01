@@ -433,7 +433,7 @@ if (!isset($_SESSION["username"])) {
     </div>
 
     <div class="container mt-4">
-  <h2 class="text-center mb-3">Comentarios</h2>
+  <h2 class="text-center mb-3">Comentarios Básquet</h2>
 
   <form id="comentarioForm" class="mt-3 p-3 border rounded bg-light">
     <div class="form-group">
