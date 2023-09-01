@@ -174,7 +174,7 @@ if (!isset($_SESSION["username"])) {
           <img src="ciclismo\img\Giro.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="ciclismo\img\vuelta.jpg" class="d-block w-100" alt="...">
+          <img src="ciclismo\img\Richard-Carapaz.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
   
