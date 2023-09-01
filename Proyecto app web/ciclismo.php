@@ -163,11 +163,11 @@ if (!isset($_SESSION["username"])) {
 
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="ciclismo\img\cicli2.jpg" class="d-block w-100" alt="...">
+                        <img src="Proyecto app web\ciclismo\img\vuelta.jpg" class="d-block w-100" alt="...">
 
                     </div>
                     <div class="carousel-item">
-                        <img src="ciclismo/img/ciclismo_carrusel.png" class="d-block w-100" alt="...">
+                        <img src="Proyecto app web\ciclismo\img\TourdeFrance.jpg" class="d-block w-100" alt="...">
 
                     </div>
                 </div>
