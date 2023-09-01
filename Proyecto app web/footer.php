@@ -1,11 +1,21 @@
 <?php
 session_start(); // Inicia la sesión
 
-if (!isset($_SESSION["username"])) {
+// Verificar si el usuario ha iniciado sesión
+if (isset($_SESSION["username"])) {
+    $isLoggedIn = true;
+    $username = $_SESSION["username"];
+} else {
+    $isLoggedIn = false;
+}
+
+if (isset($_POST["logout"])) {
+    // Cerrar sesión si se ha enviado el formulario de cierre de sesión
+    session_destroy();
     header("Location: login.php");
     exit();
 }
-?>
+?>      
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,6 +27,34 @@ if (!isset($_SESSION["username"])) {
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.google.com/specimen/Kanit" rel="stylesheet">
     <style>
+ .container2 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .image {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .description {
+            flex: 1;
+        }
+
+        /* Estilos alternos para cambiar el orden de imagen y descripción */
+        .container2:nth-child(even) .image,
+        .container2:nth-child(odd) .description {
+            order: 2;
+        }
+
+        .container2:nth-child(even) .description,
+        .container2:nth-child(odd) .image {
+            order: 1;
+        }
         .caja {
             border: 1px solid #ffffff;
             text-align: center;
@@ -55,7 +93,7 @@ if (!isset($_SESSION["username"])) {
         }
 
         .cuadro img {
-            border-radius: 10px;
+            border-radius: 100px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
 
@@ -119,61 +157,67 @@ if (!isset($_SESSION["username"])) {
             font-family: 'Kanit', sans-serif;
             font-size: 40px;
         }
+        .navbar-left {
+            justify-content: flex-start;
+        }
+
 
 
    
     </style>
 </head>
 
-<body style="background-color: #e2dbdb;">
+<body>
 <nav class="navbar navbar-expand-lg navbar-dark badge-dark">
-    <a class="navbar-brand" href="#"><img src="FOOTER/img/logo_white_large.png" width="300px" height="120px" alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="footer.php">
-                    <h5>Inicio</h5>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="UFC.php">
-                    <h5>UFC</h5>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Futbol.php">
-                    <h5>Fútbol</h5>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="Basquet.php">
-                    <h5>Básquet</h5>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="ciclismo.php">
-                    <h5>Ciclismo</h5>
-                </a>
-            </li>
-            <li class="nav-item ml-2">
-                <center><a href="formulario.php"><button class="btn btn-primary">Sugerencias</button></a></center>
-            </li>
-            <br>
-            <li class="nav-item ml-2">
-                <center><a href="login.php" class="btn btn-yellow">Cerrar Sesión</a></center>
-            </li>
-       
-        </ul>
-        <div class="navbar-nav ml-auto align-self-center">
-            <span class="navbar-text mr-2" style="font-size: 50px;"></span>
-            <span class="navbar-text text-yellow" style="font-size: 50px;"><?php echo $_SESSION["username"]; ?></span>
+        <a class="navbar-brand" href="#"><img src="FOOTER/img/logo_white_large.png" width="300px" height="120px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="footer.php">
+                        <h5>Inicio</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="UFC.php">
+                        <h5>UFC</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Futbol.php">
+                        <h5>Fútbol</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Basquet.php">
+                        <h5>Básquet</h5>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ciclismo.php">
+                        <h5>Ciclismo</h5>
+                    </a>
+                </li>
+                <li class="nav-item ml-2">
+                    <?php if ($isLoggedIn) { ?>
+                    <form method="POST">
+                        <button type="submit" class="btn btn-yellow" name="logout">Cerrar Sesión</button>
+                    </form>
+                    <?php } else { ?>
+                    <a href="login.php" class="btn btn-primary">Iniciar Sesión</a>
+                    <?php } ?>
+                </li>
+                <li class="nav-item ml-2">
+                    <?php if ($isLoggedIn) { ?>
+                    <span class="navbar-text text-yellow" style="font-size: 50px;"><?php echo $username; ?></span>
+                    <?php } ?>
+                </li>
+            </ul>
         </div>
-    </div>
-</nav>
+    </nav>
 
     <div class="scrolling-text-container">
         <marquee behavior="scroll" direction="left">
@@ -207,14 +251,12 @@ if (!isset($_SESSION["username"])) {
             </a>
         </div>
     </div>
-<<<<<<< Updated upstream
-    
-=======
+
     <div class="container">
         <h2 class="section-title">Nuestras secciones
         </h2>
     </div>
->>>>>>> Stashed changes
+
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-6">
@@ -277,13 +319,74 @@ if (!isset($_SESSION["username"])) {
             </div>
         </div>
         <div class="container">
-        <h2 class="section-title">¿Quienes somos?</h2>
-        <p class="quienesomos">¡Bienvenidos a MutantesSport! Somos un equipo de apasionados por los deportes que ha reunido sus superpoderes
-             para brindarte las últimas noticias y análisis en el mundo del deporte. Nuestra historia comenzó cuando cuatro
-              amigos decidieron unir sus fuerzas y conocimientos para crear un espacio en línea donde los amantes del fútbol,
-               baloncesto, UFC y ciclismo pudieran encontrar todo lo que necesitan saber.</p>
+    <h2 class="section-title text-center">¿Quiénes somos?</h2>
+    <p class="text-center font-weight-bold">
+        ¡Bienvenidos a MutantesSport! Somos un equipo de apasionados por los deportes que ha reunido sus superpoderes
+        para brindarte las últimas noticias y análisis en el mundo del deporte. Nuestra historia comenzó cuando cuatro
+        amigos decidieron unir sus fuerzas y conocimientos para crear un espacio en línea donde los amantes del fútbol,
+        baloncesto, UFC y ciclismo pudieran encontrar todo lo que necesitan saber.
+    </p>
+    <h3 class="section-title text-center mt-4">Conoce a los mutantes</h3>
+
+    <div class="row mt-4">
+        <div class="col-md-6 col-lg-3">
+            <div class="border border-dark rounded p-3 d-flex flex-column align-items-center" style="height: 100%; border-radius: 15px;">
+                <img src="img/foto.png" alt="Imagen 1" class="image img-fluid rounded-circle">
+                <h4 class="mt-3 text-center">Josue Espinoza</h4>
+                <p class="font-weight-bold text-center">
+                    Su pasión por el fútbol y su habilidad para analizar los juegos desde un punto de vista estratégico
+                    lo convierten en nuestro experto en tácticas y estrategias. No hay partido que se le escape.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="border border-dark rounded p-3 d-flex flex-column align-items-center" style="height: 100%; border-radius: 100px;">
+                <img src="img/chango.jpg" alt="Imagen 2" class="image img-fluid rounded-circle">
+                <h4 class="mt-3 text-center">Andrés Brazales</h4>
+                <p class="font-weight-bold text-center">
+                    ¿Te apasiona la UFC? Andrés es nuestro gurú de las artes marciales mixtas.
+                    Su conocimiento profundo del octágono y su habilidad para desglosar las peleas más emocionantes nos permiten brindarte los análisis más completos y emocionantes.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="border border-dark rounded p-3 d-flex flex-column align-items-center" style="height: 100%; border-radius: 15px;">
+                <img src="img/raul.jpeg" alt="Imagen 3" class="image img-fluid rounded-circle">
+                <h4 class="mt-3 text-center">Raúl Faz</h4>
+                <p class="font-weight-bold text-center">
+                    La pasión de Raúl por el ciclismo no tiene límites. Desde las carreras de ruta hasta el ciclismo de montaña, Ladino sigue cada pedalada con entusiasmo.
+                    Sus comentarios expertos sobre el mundo del ciclismo te mantendrán al tanto de las últimas competencias y tendencias.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+            <div class="border border-dark rounded p-3 d-flex flex-column align-items-center" style="height: 100%; border-radius: 15px;">
+                <img src="img/Nicolas.jpeg" alt="Imagen 4" class="image img-fluid rounded-circle">
+                <h4 class="mt-3 text-center">Nicolás Lara</h4>
+                <p class="font-weight-bold text-center">
+                    El baloncesto corre por las venas de Nicolás. Con su habilidad para encontrar los aspectos más destacados y momentos cruciales en cada juego, se ha convertido en nuestra fuente confiable para todo lo relacionado con la canasta. Siempre está listo para celebrar un triple espectacular.
+                </p>
+            </div>
+        </div>
     </div>
-    </div>
+
+    <p class="text-center font-weight-bold mt-4">
+        En MutantesSport, nuestra misión es llevarte más allá de los titulares y
+        brindarte una perspectiva única de cada deporte. Estamos aquí para mantenerte informado,
+        entretenido y conectado con la emoción de los deportes que amamos. ¡Acompáñanos en esta aventura deportiva!
+    </p>
+</div>
+
+   
+
+
+
+
+
+
     <footer class="mt-2 col-lg-12">
         <div class="row justify-content-around mt-3">
             <div class="col-lg-2 col-md-4 col-sm-6 col-6">
@@ -350,6 +453,17 @@ if (!isset($_SESSION["username"])) {
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+     const isLoggedIn = <?php echo json_encode($isLoggedIn); ?>;
+
+// Obtener la barra de navegación
+const navbar = document.querySelector('.navbar');
+
+// Agregar la clase 'navbar-left' si el usuario ha iniciado sesión
+if (isLoggedIn) {
+    navbar.classList.add('navbar-left');
+}
+    </script>
 </body>
 
 </html>
