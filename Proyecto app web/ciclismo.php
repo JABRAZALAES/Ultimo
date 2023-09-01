@@ -362,6 +362,33 @@ if (!isset($_SESSION["username"])) {
     </div>
     </div>
 
+
+
+
+    <div class="container mt-4">
+  <h2 class="text-center mb-3">Comentarios CICLISMO</h2>
+
+  <form id="comentarioFormCICLISMO" class="mt-3 p-3 border rounded bg-light">
+    <div class="form-group">
+      <label for="nombreCICLISMO">Nombre:</label>
+      <input type="text" id="nombreCICLISMO" name="nombreCICLISMO" class="form-control" required>
+    </div>
+
+    <div class="form-group">
+      <label for="comentarioCICLISMO">Comentario:</label>
+      <textarea id="comentarioCICLISMO" name="comentarioCICLISMO" rows="4" class="form-control" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar Comentario</button>
+  </form>
+
+  <div id="comentariosCICLISMO" class="mt-4 p-3 border rounded bg-light">
+    <?php include 'mostrar_comentarios_ciclismo.php'; ?>
+  </div>
+</div>
+
+
+
     <!-- Footer -->
     <!-- <div class="row badge-dark"> -->
     <footer class="mt-2">
@@ -484,7 +511,27 @@ if (!isset($_SESSION["username"])) {
         });
       });
     </script>
+    <script>
+  $(document).ready(function() {
+    $("#comentarioFormCICLISMO").submit(function(event) {
+      event.preventDefault();
 
+      var nombreCICLISMO = $("#nombreCICLISMO").val();
+      var comentarioCICLISMO = $("#comentarioCICLISMO").val();
+
+      $.ajax({
+        type: "POST",
+        url: "guardar_comentario_ciclismo.php",
+        data: { nombreCICLISMO: nombreCICLISMO, comentarioCICLISMO: comentarioCICLISMO },
+        success: function() {
+          $("#nombreCICLISMO").val("");
+          $("#comentarioCICLISMO").val("");
+          $("#comentariosCICLISMO").load("mostrar_comentarios_ciclismo.php");
+        }
+      });
+    });
+  });
+</script>
 </body>
 
 </html>
