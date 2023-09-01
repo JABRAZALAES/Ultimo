@@ -203,10 +203,7 @@ if (!isset($_SESSION["username"])) {
             </a>
         </div>
     </div>
-    <div class="container">
-        <h2 class="section-title">¿Quienes somos?
-        </h2>
-    </div>
+    
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-6">
@@ -264,6 +261,13 @@ if (!isset($_SESSION["username"])) {
                 </div>
             </div>
         </div>
+        <div class="container">
+        <h2 class="section-title">¿Quienes somos?</h2>
+        <p class="text-center font-weight-bold">¡Bienvenidos a MutantesSport! Somos un equipo de apasionados por los deportes que ha reunido sus superpoderes
+             para brindarte las últimas noticias y análisis en el mundo del deporte. Nuestra historia comenzó cuando cuatro
+              amigos decidieron unir sus fuerzas y conocimientos para crear un espacio en línea donde los amantes del fútbol,
+               baloncesto, UFC y ciclismo pudieran encontrar todo lo que necesitan saber.</p>
+    </div>
     </div>
     <footer class="mt-2 col-lg-12">
         <div class="row justify-content-around mt-3">
