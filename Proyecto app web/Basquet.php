@@ -142,13 +142,6 @@ if (!isset($_SESSION["username"])) {
     .zoomIn {
       animation-name: zoomIn;
     }
-    .caja a img {
-            transition: transform 0.3s;
-        }
-
-        .caja a img:hover {
-            transform: scale(1.2);
-        }
 
     /* Definición de las animaciones */
     @keyframes fadeIn {
@@ -440,92 +433,97 @@ if (!isset($_SESSION["username"])) {
     </div>
 
     <div class="container mt-4">
-  <h2 class="text-center mb-3">Comentarios Ciclismo</h2>
+  <h2 class="text-center mb-3">Comentarios Básquet</h2>
 
-  <form id="comentarioFormCiclismo" class="mt-3 p-3 border rounded bg-light" action="procesar_comentarios_ciclismo.php" method="POST">
+  <form id="comentarioForm" class="mt-3 p-3 border rounded bg-light">
     <div class="form-group">
-      <label for="nombreCiclismo">Nombre:</label>
-      <input type="text" id="nombreCiclismo" name="nombreCiclismo" class="form-control" required>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" class="form-control" required>
     </div>
 
     <div class="form-group">
-      <label for="comentarioCiclismo">Comentario:</label>
-      <textarea id="comentarioCiclismo" name="comentarioCiclismo" rows="4" class="form-control" required></textarea>
+      <label for="comentario">Comentario:</label>
+      <textarea id="comentario" name="comentario" rows="4" class="form-control" required></textarea>
     </div>
 
     <button type="submit" class="btn btn-primary">Enviar Comentario</button>
   </form>
 
-  <div id="comentariosCiclismo" class="mt-4 p-3 border rounded bg-light">
-    <?php include 'mostrar_comentarios_ciclismo.php'; ?>
+  <div id="comentarios" class="mt-4 p-3 border rounded bg-light">
+    <?php include 'mostrar_comentarios.php'; ?>
   </div>
 </div>
 
   </div>
 
   <footer class="mt-2">
-        <div class="row justify-content-around mt-3">
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <div class="caja m-2">
+    <div class="container">
+      <div class="row justify-content-around mt-3">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+          <div class="caja">
+            <a href="#"><img src="FOOTER/img/facebook.png" alt=""></a>
+            <a href="#">
+              <p class="font-weight-bold">Facebook</p>
+            </a>
+            <p>@Sport360</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+          <div class="caja">
+            <a href="#"><img src="FOOTER/img/instagram.png" alt=""></a>
+            <a href="#">
+              <p class="font-weight-bold">Instagram</p>
+            </a>
+            <p>@Sport360</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+          <div class="caja">
+            <a href="#"><img src="FOOTER/img/signo-de-twitter.png" alt=""></a>
+            <a href="#">
+              <p class="font-weight-bold">Twitter</p>
+            </a>
+            <p>@Sport360</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+          <div class="caja">
+            <a href="#"><img src="FOOTER/img/tik-tok.png" alt=""></a>
+            <a href="#">
+              <p class="font-weight-bold">Tiktok</p>
+            </a>
+            <p>@Sport360</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+          <div class="caja">
+            <a href="#"><img src="FOOTER/img/youtube.png" alt=""></a>
+            <a href="#">
+              <p class="font-weight-bold">YouTube</p>
+            </a>
+            <p>@Sport360</p>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-6">
+          <div class="caja">
+            <a href="#"><img src="FOOTER/img/tumblr-logo.png" alt=""></a>
+            <a href="#">
+              <p class="font-weight-bold">Tumblr</p>
+            </a>
+            <p>@Sport360</p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row justify-content-center">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <center><p class="">© 2023 Sport360. Todos los derechos reservados.</p></center>
+         
+        </div>
+      </div>
+    </div>
+  </footer>
 
-                    <a href="#"><img src="FOOTER/img/facebook.png" width="30px" height="30px" style="margin-top: 20px;"></a>
-                    <a href="#">
-                        <p>Facebook</p>
-                    </a>
-                    <p style="margin-bottom: 20px; margin-top: 15px;">@MutanteSport</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <div class="caja m-2">
-                    <a href="#"><img src="FOOTER/img/instagram.png" width="30px" height="30px" style="margin-top: 20px;"></a>
-                    <a href="#">
-                        <p>Instagram</p>
-                    </a>
-                    <p style="margin-bottom: 20px; margin-top: 15px;">@MutanteSport</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <div class="caja m-2">
-                    <a href="#"><img src="FOOTER/img/signo-de-twitter.png" width="30px" height="30px" style="margin-top: 20px;"></a>
-                    <a href="#">
-                        <p>Twitter</p>
-                    </a>
-                    <p style="margin-bottom: 20px; margin-top: 15px;">@MutanteSport</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <div class="caja m-2">
-                    <a href="#"><img src="FOOTER/img/tik-tok.png" width="30px" height="30px" style="margin-top: 20px;"></a>
-                    <a href="#">
-                        <p>TikTok</p>
-                    </a>
-                    <p style="margin-bottom: 20px; margin-top: 15px;">@MutanteSport</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <div class="caja m-2">
-                    <a href="#"><img src="FOOTER/img/youtube.png" width="30px" height="30px" style="margin-top: 20px;"></a>
-                    <a href="#">
-                        <p>YouTube</p>
-                    </a>
-                    <p style="margin-bottom: 20px; margin-top: 15px;">@MutanteSport</p>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6 col-6">
-                <div class="caja m-2">
-                    <a href="#"><img src="FOOTER/img/tumblr-logo.png" width="30px" height="30px" style="margin-top: 20px;"></a>
-                    <a href="#">
-                        <p>Tumblr</p>
-                    </a>
-                    <p style="margin-bottom: 20px; margin-top: 15px;">@MutanteSport</p>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div class="col-lg-12 col-md-12 col-sm-12" style="text-align: center;">
-            <p>© 2023 MutanteSport. Todos los derechos reservados.</p>
-        </div>
-    </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
