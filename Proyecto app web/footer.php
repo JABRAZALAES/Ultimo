@@ -326,7 +326,7 @@ if (isset($_POST["logout"])) {
         amigos decidieron unir sus fuerzas y conocimientos para crear un espacio en línea donde los amantes del fútbol,
         baloncesto, UFC y ciclismo pudieran encontrar todo lo que necesitan saber.
     </p>
-    <h3 class="section-title text-center mt-4">Conoce a los mutantes</h3>
+    <h3 class="section-title text-center mt-4">Conoce a los creadores de mutantesport</h3>
 
     <div class="row mt-4">
         <div class="col-md-6 col-lg-3">
@@ -356,7 +356,7 @@ if (isset($_POST["logout"])) {
                 <img src="img/raul.jpeg" alt="Imagen 3" class="image img-fluid rounded-circle">
                 <h4 class="mt-3 text-center">Raúl Faz</h4>
                 <p class="font-weight-bold text-center">
-                    La pasión de Raúl por el ciclismo no tiene límites. Desde las carreras de ruta hasta el ciclismo de montaña, Ladino sigue cada pedalada con entusiasmo.
+                    La pasión de Raúl por el ciclismo no tiene límites. Desde las carreras de ruta hasta el ciclismo de montaña,sigue cada pedalada con entusiasmo.
                     Sus comentarios expertos sobre el mundo del ciclismo te mantendrán al tanto de las últimas competencias y tendencias.
                 </p>
             </div>
@@ -374,7 +374,7 @@ if (isset($_POST["logout"])) {
     </div>
 
     <p class="text-center font-weight-bold mt-4">
-        En MutantesSport, nuestra misión es llevarte más allá de los titulares y
+        En MutanteSport, nuestra misión es llevarte más allá de los titulares y
         brindarte una perspectiva única de cada deporte. Estamos aquí para mantenerte informado,
         entretenido y conectado con la emoción de los deportes que amamos. ¡Acompáñanos en esta aventura deportiva!
     </p>

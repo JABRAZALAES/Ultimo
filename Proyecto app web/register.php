@@ -86,14 +86,14 @@
                 <label for="confirm_password">Confirmar contraseña:</label>
                 <input type="password" class="form-control" id="confirm_password" name="confirm_password" required>
             </div>
-            <!-- Puedes dejar el campo de correo electrónico, pero no se procesará -->
+            
             <div class="form-group">
                 <label for="email">Correo electrónico:</label>
                 <input type="email" class="form-control" id="email" name="email">
             </div>
             <button type="submit" class="btn btn-primary btn-block">Registrarse</button>
             <div class="text-center mt-3">
-            <a href="logout.php" class="btn btn-danger">Volver a iniciar sesión</a>
+            <a href="logout.php" class="btn btn-primary btn-block">Volver a iniciar sesión</a>
             </div>
         </form>
 
